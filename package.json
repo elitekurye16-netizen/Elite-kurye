@@ -1,0 +1,24 @@
+{
+  "name": "elite-kurye",
+  "version": "1.0.0",
+  "private": true,
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "build:apk": "eas build -p android --profile preview",
+    "build:aab": "eas build -p android --profile production",
+    "build:ios": "eas build -p ios --profile production"
+  },
+  "dependencies": {
+    "expo": "~53.0.0",
+    "expo-location": "~18.1.0",
+    "expo-camera": "~16.1.0",
+    "expo-notifications": "~0.31.0",
+    "react": "19.0.0",
+    "react-native": "0.79.2"
+  },
+  "devDependencies": {
+    "eas-cli": "latest"
+  }
+}

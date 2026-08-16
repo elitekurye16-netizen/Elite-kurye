@@ -1,0 +1,1 @@
+require('dotenv').config();const fs=require('fs'),{Pool}=require('pg');(async()=>{const p=new Pool({connectionString:process.env.DATABASE_URL});await p.query(fs.readFileSync('../db/schema.sql','utf8'));await p.end();console.log('DB hazır')})().catch(e=>{console.error(e);process.exit(1)})

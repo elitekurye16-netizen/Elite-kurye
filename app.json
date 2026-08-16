@@ -1,0 +1,42 @@
+{
+  "expo": {
+    "name": "ELİTE KURYE",
+    "slug": "elite-kurye",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#090a0d"
+    },
+    "android": {
+      "package": "com.elitekurye.app",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#090a0d"
+      },
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION",
+        "CAMERA",
+        "POST_NOTIFICATIONS"
+      ]
+    },
+    "ios": {
+      "bundleIdentifier": "com.elitekurye.app",
+      "supportsTablet": false,
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "ELİTE KURYE teslimat sırasında konumunuzu kullanır.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "ELİTE KURYE aktif görev sırasında konumunuzu kullanır.",
+        "NSCameraUsageDescription": "Teslimat kanıtı için fotoğraf çekmek üzere kamera kullanılır."
+      }
+    },
+    "plugins": [
+      "expo-location",
+      "expo-camera",
+      "expo-notifications"
+    ]
+  }
+}
