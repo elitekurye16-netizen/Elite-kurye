@@ -14,14 +14,14 @@ jobs:
         with:
           node-version: 18
 
+      - name: Setup EAS
+        uses: expo/expo-github-action@v8
+        with:
+          eas-version: latest
+          token: ${{ secrets.EXPO_TOKEN }}
+
       - name: Install dependencies
         run: npm install
 
-      - name: Build Android Project
-        run: npx expo export --platform android
-
-      - name: Upload Build Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: app-build
-          path: dist/
+      - name: Build APK
+        run: eas build --platform android --profile preview --non-interactive
